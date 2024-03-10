@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4cxm7iduvli7"]
+
+[ext_resource type="Texture2D" uid="uid://dl5fe1efhhiis" path="res://data/field/field.svg" id="1_ybw84"]
+[ext_resource type="PackedScene" uid="uid://bngerbglkb5a6" path="res://scenes/hero.tscn" id="2_rxb4p"]
+
+[node name="Level1" type="Node2D"]
+position = Vector2(-5, -1)
+
+[node name="Field" type="Sprite2D" parent="."]
+position = Vector2(1029, 1025)
+texture = ExtResource("1_ybw84")
+
+[node name="Hero" parent="." instance=ExtResource("2_rxb4p")]
+position = Vector2(11.332, 10.9699)

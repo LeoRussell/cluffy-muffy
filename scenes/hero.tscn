@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bngerbglkb5a6"]
+
+[ext_resource type="Texture2D" uid="uid://mrnsk1abbji3" path="res://data/hero/heroidle.svg" id="1_2o74c"]
+[ext_resource type="Script" path="res://scenes/hero.gd" id="1_ew5yp"]
+
+[node name="Hero" type="CharacterBody2D"]
+position = Vector2(1, 1)
+motion_mode = 1
+script = ExtResource("1_ew5yp")
+
+[node name="Heroidle" type="Sprite2D" parent="."]
+position = Vector2(63, 63)
+texture = ExtResource("1_2o74c")

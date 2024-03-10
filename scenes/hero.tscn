@@ -1,13 +1,58 @@
-[gd_scene load_steps=3 format=3 uid="uid://bngerbglkb5a6"]
+[gd_scene load_steps=10 format=3 uid="uid://bngerbglkb5a6"]
 
-[ext_resource type="Texture2D" uid="uid://mrnsk1abbji3" path="res://data/hero/heroidle.svg" id="1_2o74c"]
+[ext_resource type="Texture2D" uid="uid://ck44kc1h2igus" path="res://data/hero/heroidle.svg" id="1_2o74c"]
 [ext_resource type="Script" path="res://scenes/hero.gd" id="1_ew5yp"]
+[ext_resource type="Texture2D" uid="uid://b12v8pmnl4327" path="res://data/hero/heromove1.svg" id="2_gooe2"]
+[ext_resource type="Texture2D" uid="uid://8ajicrcp40fu" path="res://data/hero/heromove2.svg" id="3_iip7p"]
+[ext_resource type="Texture2D" uid="uid://el3tq4h0oxc2" path="res://data/hero/heromove3.svg" id="4_va1nx"]
+[ext_resource type="Texture2D" uid="uid://cslfy12873qfx" path="res://data/hero/heromove4.svg" id="5_2hj5f"]
+[ext_resource type="Texture2D" uid="uid://sacbkpftrxt6" path="res://data/hero/heromove5.svg" id="6_m4x3x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_icj41"]
+size = Vector2(63, 91)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u5mxw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2o74c")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("2_gooe2")
+}, {
+"duration": 3.0,
+"texture": ExtResource("3_iip7p")
+}, {
+"duration": 3.0,
+"texture": ExtResource("4_va1nx")
+}, {
+"duration": 3.0,
+"texture": ExtResource("5_2hj5f")
+}, {
+"duration": 3.0,
+"texture": ExtResource("6_m4x3x")
+}],
+"loop": true,
+"name": &"move",
+"speed": 30.0
+}]
 
 [node name="Hero" type="CharacterBody2D"]
 position = Vector2(1, 1)
+collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_ew5yp")
 
-[node name="Heroidle" type="Sprite2D" parent="."]
-position = Vector2(63, 63)
-texture = ExtResource("1_2o74c")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(31, 45)
+shape = SubResource("RectangleShape2D_icj41")
+
+[node name="HeroMovingSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(31, 45)
+sprite_frames = SubResource("SpriteFrames_u5mxw")
+animation = &"idle"

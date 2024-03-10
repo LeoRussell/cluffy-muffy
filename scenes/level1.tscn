@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4cxm7iduvli7"]
+[gd_scene load_steps=4 format=3 uid="uid://c4cxm7iduvli7"]
 
 [ext_resource type="Texture2D" uid="uid://dnvassw1y3d52" path="res://data/field.svg" id="1_ybw84"]
 [ext_resource type="PackedScene" uid="uid://bngerbglkb5a6" path="res://scenes/hero.tscn" id="2_rxb4p"]
+[ext_resource type="PackedScene" uid="uid://b10ykqs8dg6pm" path="res://scenes/box.tscn" id="3_4e1m0"]
 
 [node name="Level1" type="Node2D"]
 position = Vector2(-5, -1)
@@ -11,4 +12,37 @@ position = Vector2(645, 361)
 texture = ExtResource("1_ybw84")
 
 [node name="Hero" parent="." instance=ExtResource("2_rxb4p")]
-position = Vector2(6, 4)
+position = Vector2(7, 3)
+collision_priority = 2.0
+motion_mode = 0
+slide_on_ceiling = false
+
+[node name="ObjectBox" parent="." instance=ExtResource("3_4e1m0")]
+position = Vector2(284, 192)
+
+[node name="ObjectBox2" parent="." instance=ExtResource("3_4e1m0")]
+position = Vector2(156, 193)
+
+[node name="ObjectBox3" parent="." instance=ExtResource("3_4e1m0")]
+position = Vector2(4, 257)
+
+[node name="ObjectBox4" parent="." instance=ExtResource("3_4e1m0")]
+position = Vector2(3, 321)
+
+[node name="ObjectBox5" parent="." instance=ExtResource("3_4e1m0")]
+position = Vector2(220, 193)
+
+[node name="ObjectBox6" parent="." instance=ExtResource("3_4e1m0")]
+position = Vector2(156, 257)
+
+[node name="ObjectBox7" parent="." instance=ExtResource("3_4e1m0")]
+position = Vector2(156, 130)
+
+[node name="ObjectBox8" parent="." instance=ExtResource("3_4e1m0")]
+position = Vector2(409, 130)
+
+[node name="ObjectBox9" parent="." instance=ExtResource("3_4e1m0")]
+position = Vector2(348, 192)
+
+[node name="ObjectBox10" parent="." instance=ExtResource("3_4e1m0")]
+position = Vector2(220, 320)

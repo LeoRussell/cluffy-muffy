@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://ce4wtgol5mlpp"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_s2o20"]
-size = Vector2(65, 64)
-
-[node name="AboveGroundCollider" type="CollisionShape2D"]
-position = Vector2(33, 32)
-shape = SubResource("RectangleShape2D_s2o20")

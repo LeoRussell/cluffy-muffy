@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://kv3rnfejje5y"]
+
+[ext_resource type="Texture2D" uid="uid://brctaki33gq8f" path="res://data/objects/border.svg" id="1_rxj6p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vki3f"]
+size = Vector2(16.5, 656)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qfqem"]
+size = Vector2(1217, 16)
+
+[node name="GameBorder" type="StaticBody2D"]
+collision_mask = 2
+
+[node name="Border" type="Sprite2D" parent="."]
+position = Vector2(638, 358)
+texture = ExtResource("1_rxj6p")
+
+[node name="LeftSideCollider" type="CollisionShape2D" parent="."]
+position = Vector2(33.5, 362)
+shape = SubResource("RectangleShape2D_vki3f")
+
+[node name="RightSideCollider" type="CollisionShape2D" parent="."]
+position = Vector2(1233.75, 362)
+shape = SubResource("RectangleShape2D_vki3f")
+
+[node name="BottomSideCollider" type="CollisionShape2D" parent="."]
+position = Vector2(633, 682)
+shape = SubResource("RectangleShape2D_qfqem")
+
+[node name="UpperSideCollider" type="CollisionShape2D" parent="."]
+position = Vector2(633.5, 42)
+shape = SubResource("RectangleShape2D_qfqem")

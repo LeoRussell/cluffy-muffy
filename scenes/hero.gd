@@ -1,24 +1,15 @@
 extends CharacterBody2D
 
-@onready var _animated_sprite = $HeroMovingSprite
+@onready var _animated_sprite = $HeroSprite
 
-const SPEED = 200	
+const SPEED = 175	
 
 func _physics_process(delta):
-	if Input.is_action_pressed("move_left"):
-		# another anim in future
+	if Input.is_action_pressed("move_left") or Input.is_action_pressed("move_right"):
 		_animated_sprite.play("move")
-		
-	elif Input.is_action_pressed("move_up"):
-		# another anim in future
-		_animated_sprite.play("move")
-		
-	elif Input.is_action_pressed("move_right"):
-		# another anim in future
-		_animated_sprite.play("move")
-		
-	elif Input.is_action_pressed("move_down"):
-		# another anim in future
+	
+	# idk how to write it better. XP
+	elif Input.is_action_pressed("move_up") or Input.is_action_pressed("move_down"):
 		_animated_sprite.play("move")
 		
 	else:

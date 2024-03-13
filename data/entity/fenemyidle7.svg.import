@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3etwnvve7vql"
-path="res://.godot/imported/floor.svg-fddc036dc84891eef65c7f27ee04f861.ctex"
+uid="uid://blnn4yf0cf8ha"
+path="res://.godot/imported/fenemyidle7.svg-b55a145745a76e73e1ad283b897e2895.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/objects/floor.svg"
-dest_files=["res://.godot/imported/floor.svg-fddc036dc84891eef65c7f27ee04f861.ctex"]
+source_file="res://data/entity/fenemyidle7.svg"
+dest_files=["res://.godot/imported/fenemyidle7.svg-b55a145745a76e73e1ad283b897e2895.ctex"]
 
 [params]
 

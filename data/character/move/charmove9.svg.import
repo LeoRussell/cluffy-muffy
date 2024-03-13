@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3etwnvve7vql"
-path="res://.godot/imported/floor.svg-fddc036dc84891eef65c7f27ee04f861.ctex"
+uid="uid://dwm1ph2oohox2"
+path="res://.godot/imported/charmove9.svg-0f054ddd122aaba1a078fb534cd9947e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/objects/floor.svg"
-dest_files=["res://.godot/imported/floor.svg-fddc036dc84891eef65c7f27ee04f861.ctex"]
+source_file="res://data/character/move/charmove9.svg"
+dest_files=["res://.godot/imported/charmove9.svg-0f054ddd122aaba1a078fb534cd9947e.ctex"]
 
 [params]
 

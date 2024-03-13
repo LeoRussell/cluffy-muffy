@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3etwnvve7vql"
-path="res://.godot/imported/floor.svg-fddc036dc84891eef65c7f27ee04f861.ctex"
+uid="uid://c8cpn2hk8xcnc"
+path="res://.godot/imported/charidle7.svg-147c4d603ee692d1bd75cca98e4db330.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/objects/floor.svg"
-dest_files=["res://.godot/imported/floor.svg-fddc036dc84891eef65c7f27ee04f861.ctex"]
+source_file="res://data/character/idle/charidle7.svg"
+dest_files=["res://.godot/imported/charidle7.svg-147c4d603ee692d1bd75cca98e4db330.ctex"]
 
 [params]
 

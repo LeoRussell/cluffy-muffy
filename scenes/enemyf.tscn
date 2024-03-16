@@ -1,17 +1,28 @@
-[gd_scene load_steps=22 format=3 uid="uid://r1en4lfc8onr"]
+[gd_scene load_steps=33 format=3 uid="uid://r1en4lfc8onr"]
 
 [ext_resource type="Script" path="res://scenes/enemyf.gd" id="1_almh5"]
 [ext_resource type="Texture2D" uid="uid://ddb1efti7q73i" path="res://data/entity/fenemyidle1.svg" id="1_y86po"]
+[ext_resource type="Texture2D" uid="uid://bb6uuxeb452q6" path="res://data/entity/death/fenemydeath1.svg" id="2_5ane0"]
 [ext_resource type="Texture2D" uid="uid://chrqslmsdgwpc" path="res://data/entity/fenemyidle2.svg" id="2_bjamu"]
+[ext_resource type="Texture2D" uid="uid://ylwq2t068ygb" path="res://data/entity/death/fenemydeath2.svg" id="3_3mjd2"]
 [ext_resource type="Texture2D" uid="uid://bx7bu86aqohfo" path="res://data/entity/fenemyidle3.svg" id="3_3qnvi"]
 [ext_resource type="Texture2D" uid="uid://duy0wfabgwv37" path="res://data/entity/fenemyidle4.svg" id="4_p6jpm"]
+[ext_resource type="Texture2D" uid="uid://ba11h8vj2qnfo" path="res://data/entity/death/fenemydeath3.svg" id="4_xp10q"]
+[ext_resource type="Texture2D" uid="uid://q01bs8n44mgk" path="res://data/entity/death/fenemydeath4.svg" id="5_abj55"]
 [ext_resource type="Texture2D" uid="uid://dqnm4ifwvc7c4" path="res://data/entity/fenemyidle5.svg" id="5_trbq6"]
+[ext_resource type="Texture2D" uid="uid://d0kkx6141u1e0" path="res://data/entity/death/fenemydeath5.svg" id="6_mlvsl"]
 [ext_resource type="Texture2D" uid="uid://cob7jiqyppyih" path="res://data/entity/fenemyidle6.svg" id="6_w23aa"]
+[ext_resource type="Texture2D" uid="uid://ih2q26h0k6fv" path="res://data/entity/death/fenemydeath6.svg" id="7_6grp2"]
 [ext_resource type="Texture2D" uid="uid://blnn4yf0cf8ha" path="res://data/entity/fenemyidle7.svg" id="7_6id7n"]
+[ext_resource type="Texture2D" uid="uid://cd0i43rxkuues" path="res://data/entity/death/fenemydeath7.svg" id="8_20kwr"]
 [ext_resource type="Texture2D" uid="uid://bl7dl1s1p3ddv" path="res://data/entity/fenemyidle8.svg" id="8_e1s67"]
 [ext_resource type="Texture2D" uid="uid://bh7j4y3kjsovk" path="res://data/entity/fenemymove1.svg" id="9_0a0ni"]
+[ext_resource type="Texture2D" uid="uid://boa1gkhbdf8km" path="res://data/entity/death/fenemydeath8.svg" id="9_kxjeq"]
 [ext_resource type="Texture2D" uid="uid://dvym8y2eidr7i" path="res://data/entity/fenemymove2.svg" id="10_7u3o0"]
+[ext_resource type="Texture2D" uid="uid://dkb6e5vsuer4t" path="res://data/entity/death/fenemydeath9.svg" id="10_imrxt"]
+[ext_resource type="Texture2D" path="res://data/entity/death/fenemydeath10.svg" id="11_inr2j"]
 [ext_resource type="Texture2D" uid="uid://cwyl70j2b12v7" path="res://data/entity/fenemymove3.svg" id="11_s77cj"]
+[ext_resource type="Texture2D" path="res://data/entity/death/fenemydeath11.svg" id="12_2o1wm"]
 [ext_resource type="Texture2D" uid="uid://cr4pi4lixq7ij" path="res://data/entity/fenemymove4.svg" id="12_c0at8"]
 [ext_resource type="Texture2D" uid="uid://b2cnw1dx4nmlx" path="res://data/entity/fenemymove5.svg" id="13_d5i0u"]
 [ext_resource type="Texture2D" uid="uid://c23k7a2w62suw" path="res://data/entity/fenemymove6.svg" id="14_58c0o"]
@@ -22,6 +33,44 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_um6kd"]
 animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("2_5ane0")
+}, {
+"duration": 2.0,
+"texture": ExtResource("3_3mjd2")
+}, {
+"duration": 2.0,
+"texture": ExtResource("4_xp10q")
+}, {
+"duration": 2.0,
+"texture": ExtResource("5_abj55")
+}, {
+"duration": 2.0,
+"texture": ExtResource("6_mlvsl")
+}, {
+"duration": 2.0,
+"texture": ExtResource("7_6grp2")
+}, {
+"duration": 2.0,
+"texture": ExtResource("8_20kwr")
+}, {
+"duration": 2.0,
+"texture": ExtResource("9_kxjeq")
+}, {
+"duration": 2.0,
+"texture": ExtResource("10_imrxt")
+}, {
+"duration": 2.0,
+"texture": ExtResource("11_inr2j")
+}, {
+"duration": 2.0,
+"texture": ExtResource("12_2o1wm")
+}],
+"loop": true,
+"name": &"death",
+"speed": 30.0
+}, {
 "frames": [{
 "duration": 5.0,
 "texture": ExtResource("1_y86po")
@@ -90,18 +139,23 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wybua"]
 size = Vector2(52, 54.5)
 
-[node name="EnemyF" type="StaticBody2D"]
+[node name="enemyF" type="StaticBody2D"]
 collision_layer = 8
-collision_mask = 4
+collision_mask = 6
 script = ExtResource("1_almh5")
 
 [node name="EnemyFSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(26, 28)
 sprite_frames = SubResource("SpriteFrames_um6kd")
-animation = &"idle"
-frame = 3
-frame_progress = 0.554252
+animation = &"death"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(26, 26.75)
 shape = SubResource("RectangleShape2D_wybua")
+
+[node name="DeathTimer" type="Timer" parent="."]
+wait_time = 0.55
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="animation_finished" from="EnemyFSprite" to="." method="_on_enemy_f_sprite_animation_finished"]
+[connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]

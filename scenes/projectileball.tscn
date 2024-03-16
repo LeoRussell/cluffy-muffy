@@ -1,20 +1,57 @@
-[gd_scene load_steps=13 format=3 uid="uid://denitf2ner3m5"]
+[gd_scene load_steps=21 format=3 uid="uid://denitf2ner3m5"]
 
 [ext_resource type="Script" path="res://scenes/projectileball.gd" id="1_nab0q"]
 [ext_resource type="Texture2D" uid="uid://bxwygpn06amdn" path="res://data/projectile/pball1.svg" id="1_x2bli"]
 [ext_resource type="Texture2D" uid="uid://cv0p2sc0bgext" path="res://data/projectile/pball2.svg" id="2_i3rtx"]
+[ext_resource type="Texture2D" uid="uid://bd3dn6vcqiplr" path="res://data/projectile/broken/pballhit1.svg" id="2_vteo8"]
 [ext_resource type="Texture2D" uid="uid://babrrtte41q05" path="res://data/projectile/pball3.svg" id="3_8qdic"]
+[ext_resource type="Texture2D" uid="uid://db5frnw570fd3" path="res://data/projectile/broken/pballhit2.svg" id="3_wlpxn"]
 [ext_resource type="Texture2D" uid="uid://dgi40snok3k6k" path="res://data/projectile/pball4.svg" id="4_jjio5"]
+[ext_resource type="Texture2D" uid="uid://8bsnhb6aekpd" path="res://data/projectile/broken/pballhit3.svg" id="4_prxlc"]
+[ext_resource type="Texture2D" uid="uid://dsqr7uewsem6f" path="res://data/projectile/broken/pballhit4.svg" id="5_bda6j"]
 [ext_resource type="Texture2D" uid="uid://oqalc25xiiac" path="res://data/projectile/pball5.svg" id="5_pst1u"]
 [ext_resource type="Texture2D" uid="uid://bvje1883a50s2" path="res://data/projectile/pball6.svg" id="6_b41k8"]
+[ext_resource type="Texture2D" uid="uid://buoqfptdjh44i" path="res://data/projectile/broken/pballhit5.svg" id="6_xw8bx"]
+[ext_resource type="Texture2D" uid="uid://3qr31aefoqdh" path="res://data/projectile/broken/pballhit6.svg" id="7_nxv08"]
 [ext_resource type="Texture2D" uid="uid://docwpey1r2lpt" path="res://data/projectile/pball7.svg" id="7_qccfb"]
+[ext_resource type="Texture2D" uid="uid://di6q4h1jb8o4e" path="res://data/projectile/broken/pballhit7.svg" id="8_5c6tr"]
 [ext_resource type="Texture2D" uid="uid://tj8rutr1wqet" path="res://data/projectile/pball8.svg" id="8_yk5ia"]
+[ext_resource type="Texture2D" uid="uid://djf2fvvo0un10" path="res://data/projectile/broken/pballhit8.svg" id="9_rerye"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_50iq2"]
 size = Vector2(17.5, 17)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m37mb"]
 animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("2_vteo8")
+}, {
+"duration": 3.0,
+"texture": ExtResource("3_wlpxn")
+}, {
+"duration": 3.0,
+"texture": ExtResource("4_prxlc")
+}, {
+"duration": 3.0,
+"texture": ExtResource("5_bda6j")
+}, {
+"duration": 3.0,
+"texture": ExtResource("6_xw8bx")
+}, {
+"duration": 3.0,
+"texture": ExtResource("7_nxv08")
+}, {
+"duration": 3.0,
+"texture": ExtResource("8_5c6tr")
+}, {
+"duration": 3.0,
+"texture": ExtResource("9_rerye")
+}],
+"loop": true,
+"name": &"broken",
+"speed": 30.0
+}, {
 "frames": [{
 "duration": 7.0,
 "texture": ExtResource("1_x2bli")
@@ -60,12 +97,12 @@ shape = SubResource("RectangleShape2D_50iq2")
 [node name="BallSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(8, 6)
 sprite_frames = SubResource("SpriteFrames_m37mb")
-animation = &"flight"
-frame = 7
-frame_progress = 0.998439
+animation = &"broken"
+frame = 5
+frame_progress = 0.307387
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 9.0
+wait_time = 0.7
 one_shot = true
 
 [node name="BallSignal" type="Area2D" parent="."]

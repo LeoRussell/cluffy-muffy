@@ -91,6 +91,7 @@ size = Vector2(53, 52)
 top_level = true
 position = Vector2(-30, -27)
 collision_layer = 2
+collision_mask = 9
 motion_mode = 1
 script = ExtResource("1_ew5yp")
 projectile = ExtResource("2_nvgdu")

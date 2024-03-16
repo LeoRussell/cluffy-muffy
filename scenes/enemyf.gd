@@ -5,3 +5,13 @@ extends Area2D
 
 func _process(delta):
 	_animated_sprite.play("idle")
+
+
+func _on_body_entered(body):
+	if body.name == "ProjectileBall":
+		body.queue_free()
+
+
+func _on_body_exited(body):
+	if body.name == "ProjectileBall":
+		body.queue_free()

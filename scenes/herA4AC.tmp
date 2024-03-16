@@ -108,6 +108,3 @@ shape = SubResource("RectangleShape2D_tvkiv")
 position = Vector2(58, 50)
 
 [node name="Timer" type="Timer" parent="."]
-one_shot = true
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

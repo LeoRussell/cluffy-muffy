@@ -75,3 +75,4 @@ fire_down={
 2d_physics/layer_1="Enviroment"
 2d_physics/layer_2="Body"
 2d_physics/layer_3="Attack"
+2d_physics/layer_4="Enemy"

@@ -1,0 +1,63 @@
+[gd_scene load_steps=12 format=3 uid="uid://denitf2ner3m5"]
+
+[ext_resource type="Script" path="res://scenes/projectileball.gd" id="1_nab0q"]
+[ext_resource type="Texture2D" uid="uid://bxwygpn06amdn" path="res://data/projectile/pball1.svg" id="1_x2bli"]
+[ext_resource type="Texture2D" uid="uid://cv0p2sc0bgext" path="res://data/projectile/pball2.svg" id="2_i3rtx"]
+[ext_resource type="Texture2D" uid="uid://babrrtte41q05" path="res://data/projectile/pball3.svg" id="3_8qdic"]
+[ext_resource type="Texture2D" uid="uid://dgi40snok3k6k" path="res://data/projectile/pball4.svg" id="4_jjio5"]
+[ext_resource type="Texture2D" uid="uid://oqalc25xiiac" path="res://data/projectile/pball5.svg" id="5_pst1u"]
+[ext_resource type="Texture2D" uid="uid://bvje1883a50s2" path="res://data/projectile/pball6.svg" id="6_b41k8"]
+[ext_resource type="Texture2D" uid="uid://docwpey1r2lpt" path="res://data/projectile/pball7.svg" id="7_qccfb"]
+[ext_resource type="Texture2D" uid="uid://tj8rutr1wqet" path="res://data/projectile/pball8.svg" id="8_yk5ia"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_50iq2"]
+size = Vector2(17.5, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m37mb"]
+animations = [{
+"frames": [{
+"duration": 7.0,
+"texture": ExtResource("1_x2bli")
+}, {
+"duration": 7.0,
+"texture": ExtResource("2_i3rtx")
+}, {
+"duration": 7.0,
+"texture": ExtResource("3_8qdic")
+}, {
+"duration": 7.0,
+"texture": ExtResource("4_jjio5")
+}, {
+"duration": 7.0,
+"texture": ExtResource("5_pst1u")
+}, {
+"duration": 7.0,
+"texture": ExtResource("6_b41k8")
+}, {
+"duration": 7.0,
+"texture": ExtResource("7_qccfb")
+}, {
+"duration": 7.0,
+"texture": ExtResource("8_yk5ia")
+}],
+"loop": true,
+"name": &"flight",
+"speed": 30.0
+}]
+
+[node name="ProjectileBall" type="Area2D"]
+script = ExtResource("1_nab0q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_50iq2")
+
+[node name="BallSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(8, 6)
+sprite_frames = SubResource("SpriteFrames_m37mb")
+animation = &"flight"
+frame = 7
+frame_progress = 0.998439
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="ready" from="." to="." method="_on_ready"]

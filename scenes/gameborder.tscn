@@ -12,7 +12,8 @@ size = Vector2(1217, 16)
 collision_mask = 2
 
 [node name="Border" type="Sprite2D" parent="."]
-position = Vector2(638, 358)
+position = Vector2(638, 355)
+scale = Vector2(1, 1.00882)
 texture = ExtResource("1_rxj6p")
 
 [node name="LeftSideCollider" type="CollisionShape2D" parent="."]
@@ -28,5 +29,5 @@ position = Vector2(633, 682)
 shape = SubResource("RectangleShape2D_qfqem")
 
 [node name="UpperSideCollider" type="CollisionShape2D" parent="."]
-position = Vector2(633.5, 42)
+position = Vector2(633.5, 35)
 shape = SubResource("RectangleShape2D_qfqem")

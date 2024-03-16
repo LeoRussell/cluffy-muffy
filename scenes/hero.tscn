@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://bngerbglkb5a6"]
+[gd_scene load_steps=22 format=3 uid="uid://bngerbglkb5a6"]
 
 [ext_resource type="Script" path="res://scenes/hero.gd" id="1_ew5yp"]
 [ext_resource type="Texture2D" uid="uid://cf0t03uj40b8p" path="res://data/character/idle/charidle1.svg" id="2_8y4cl"]
+[ext_resource type="PackedScene" uid="uid://denitf2ner3m5" path="res://scenes/projectileball.tscn" id="2_nvgdu"]
 [ext_resource type="Texture2D" uid="uid://clsclclpo3egg" path="res://data/character/idle/charidle2.svg" id="3_b3k3g"]
 [ext_resource type="Texture2D" uid="uid://dk4owhtf8y6x1" path="res://data/character/idle/charidle3.svg" id="4_l3f5c"]
 [ext_resource type="Texture2D" uid="uid://cee53rt8mdpqw" path="res://data/character/idle/charidle4.svg" id="5_l4x1f"]
@@ -92,6 +93,7 @@ position = Vector2(-30, -27)
 collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_ew5yp")
+projectile = ExtResource("2_nvgdu")
 
 [node name="HeroSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(57, 53)
@@ -101,3 +103,8 @@ animation = &"idle"
 [node name="CharacterCollider" type="CollisionShape2D" parent="."]
 position = Vector2(57, 53)
 shape = SubResource("RectangleShape2D_tvkiv")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="Node"]
+position = Vector2(27, 24)

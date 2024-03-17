@@ -16,6 +16,7 @@ func get_damage(points):
 	health -= points
 	if health <= 0:
 		$CollisionShape2D.queue_free()
+		get_parent().update(-1)
 		
 		$DeathTimer.start()
 		_animated_sprite.play("death")

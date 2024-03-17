@@ -13,7 +13,7 @@ config_version=5
 config/name="CluffyMuffy"
 run/main_scene="res://scenes/level1.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://data/character/idle/charidle1.svg"
 
 [display]
 

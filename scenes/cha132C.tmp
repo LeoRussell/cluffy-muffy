@@ -1,0 +1,67 @@
+[gd_scene load_steps=13 format=3 uid="uid://cwigjhkns2w76"]
+
+[ext_resource type="Texture2D" uid="uid://craeui6awd1d5" path="res://data/objects/door1.svg" id="1_62pj5"]
+[ext_resource type="Script" path="res://scenes/changedoor.gd" id="1_j7rhj"]
+[ext_resource type="Texture2D" uid="uid://dtuh3ij5gsnlw" path="res://data/objects/door2.svg" id="2_co1aa"]
+[ext_resource type="Texture2D" uid="uid://8t07av02kyjv" path="res://data/objects/door3.svg" id="3_muhti"]
+[ext_resource type="Texture2D" uid="uid://todq0uyae1ny" path="res://data/objects/door4.svg" id="4_ouumv"]
+[ext_resource type="Texture2D" uid="uid://bfls2s1u856aa" path="res://data/objects/door5.svg" id="5_wlfjt"]
+[ext_resource type="Texture2D" uid="uid://ux8hspu2te8" path="res://data/objects/door6.svg" id="6_qmigf"]
+[ext_resource type="Texture2D" uid="uid://b7bknsd061u5b" path="res://data/objects/door7.svg" id="7_eeq6f"]
+[ext_resource type="Texture2D" uid="uid://3ebgqnu4ti1n" path="res://data/objects/door8.svg" id="8_wchem"]
+[ext_resource type="Texture2D" uid="uid://hru4ry5e2pqk" path="res://data/objects/door9.svg" id="9_6hcer"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ata6q"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("1_62pj5")
+}, {
+"duration": 3.0,
+"texture": ExtResource("2_co1aa")
+}, {
+"duration": 3.0,
+"texture": ExtResource("3_muhti")
+}, {
+"duration": 3.0,
+"texture": ExtResource("4_ouumv")
+}, {
+"duration": 3.0,
+"texture": ExtResource("5_wlfjt")
+}, {
+"duration": 3.0,
+"texture": ExtResource("6_qmigf")
+}, {
+"duration": 3.0,
+"texture": ExtResource("7_eeq6f")
+}, {
+"duration": 3.0,
+"texture": ExtResource("8_wchem")
+}, {
+"duration": 3.0,
+"texture": ExtResource("9_6hcer")
+}],
+"loop": true,
+"name": &"open",
+"speed": 30.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2dbu7"]
+size = Vector2(40.5, 90.5)
+
+[node name="ChangeDoor" type="Area2D"]
+visible = false
+collision_mask = 2
+script = ExtResource("1_j7rhj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(32, 64)
+sprite_frames = SubResource("SpriteFrames_ata6q")
+animation = &"open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(85, 61)
+shape = SubResource("RectangleShape2D_2dbu7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]

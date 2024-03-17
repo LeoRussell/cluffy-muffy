@@ -22,9 +22,9 @@ func _on_ball_signal_body_entered(body):
 		body.get_damage(1)
 	
 	# ball fade animation
-	direction = -direction
 	$BallSignal.queue_free()
 	_animated_sprite.play("broken")
+	direction = -direction
 	$Timer.start()
 	
 	

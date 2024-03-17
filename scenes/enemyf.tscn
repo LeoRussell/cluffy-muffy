@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://r1en4lfc8onr"]
+[gd_scene load_steps=31 format=3 uid="uid://r1en4lfc8onr"]
 
 [ext_resource type="Script" path="res://scenes/enemyf.gd" id="1_almh5"]
 [ext_resource type="Texture2D" uid="uid://ddb1efti7q73i" path="res://data/entity/fenemyidle1.svg" id="1_y86po"]
@@ -20,9 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://boa1gkhbdf8km" path="res://data/entity/death/fenemydeath8.svg" id="9_kxjeq"]
 [ext_resource type="Texture2D" uid="uid://dvym8y2eidr7i" path="res://data/entity/fenemymove2.svg" id="10_7u3o0"]
 [ext_resource type="Texture2D" uid="uid://dkb6e5vsuer4t" path="res://data/entity/death/fenemydeath9.svg" id="10_imrxt"]
-[ext_resource type="Texture2D" path="res://data/entity/death/fenemydeath10.svg" id="11_inr2j"]
 [ext_resource type="Texture2D" uid="uid://cwyl70j2b12v7" path="res://data/entity/fenemymove3.svg" id="11_s77cj"]
-[ext_resource type="Texture2D" path="res://data/entity/death/fenemydeath11.svg" id="12_2o1wm"]
 [ext_resource type="Texture2D" uid="uid://cr4pi4lixq7ij" path="res://data/entity/fenemymove4.svg" id="12_c0at8"]
 [ext_resource type="Texture2D" uid="uid://b2cnw1dx4nmlx" path="res://data/entity/fenemymove5.svg" id="13_d5i0u"]
 [ext_resource type="Texture2D" uid="uid://c23k7a2w62suw" path="res://data/entity/fenemymove6.svg" id="14_58c0o"]
@@ -60,12 +58,6 @@ animations = [{
 }, {
 "duration": 2.0,
 "texture": ExtResource("10_imrxt")
-}, {
-"duration": 2.0,
-"texture": ExtResource("11_inr2j")
-}, {
-"duration": 2.0,
-"texture": ExtResource("12_2o1wm")
 }],
 "loop": true,
 "name": &"death",

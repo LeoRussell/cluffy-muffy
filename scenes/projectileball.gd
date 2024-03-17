@@ -9,7 +9,7 @@ const SPEED = 250
 func _on_ready():
 	_animated_sprite.play("flight")
 
-func _process(delta):
+func _physics_process(delta):
 	velocity = direction * SPEED
 	
 	move_and_slide()
@@ -28,9 +28,10 @@ func _on_ball_signal_body_entered(body):
 	$Timer.start()
 	
 	
-	
 func _on_timer_timeout():
 	queue_free()
 
+func _on_visible_on_screen_notifier_2d_screen_exited():
+	queue_free()
 
 
